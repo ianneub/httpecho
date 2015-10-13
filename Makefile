@@ -4,7 +4,7 @@ NAME=ianneub/http-test-server
 OUTPUT=httpecho
 
 build:
-	docker run --rm -v "$(PWD):/src" centurylink/golang-builder
+	docker run -v "$(PWD):/src" centurylink/golang-builder
 	docker build -t $(NAME) .
 	rm $(OUTPUT)
 
