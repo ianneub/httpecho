@@ -1,0 +1,13 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - make
+
+deployment:
+  latest:
+    branch: master
+    commands:
+      - make push
