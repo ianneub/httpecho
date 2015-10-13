@@ -17,16 +17,10 @@ func sortMapByKeys(input map[string][]string) (keys []string) {
   return
 }
 
-func handler(w http.ResponseWriter, r *http.Request) {
+func echoHandler(w http.ResponseWriter, r *http.Request) {
   fmt.Printf("Handling %s request for %s from %s..\n", r.Method, r.URL, r.RemoteAddr)
 
   for _, name := range sortMapByKeys(r.Header) {
     fmt.Fprintf(w, "%s: %s\n", name, strings.Join(r.Header[name], ""))
   }
-}
-
-func main() {
-  http.HandleFunc("/", handler)
-  fmt.Println("Listening on port 8080..")
-  http.ListenAndServe(":8080", nil)
 }
