@@ -1,0 +1,11 @@
+# Go workspace file
+go.work
+go.work.sum
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store

@@ -14,6 +14,6 @@ docker run -it -p 8080:8080 ianneub/httpecho
 
 ## Endpoints
 
-/ - Will echo the HTTP request headers back to the client
+`/` - Will echo the HTTP request headers back to the client
 
-/long - Will sleep for 300 seconds by default and return OK to the client. You can set the `s` query string to the number of seconds you want to wait before returning.
+`/long` - Will sleep for 300 seconds by default and return OK to the client. You can set the `s` query string to the number of seconds you want to wait before returning.
