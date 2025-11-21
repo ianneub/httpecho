@@ -9,7 +9,7 @@ httpecho is a simple HTTP web server designed for testing purposes. It provides 
 - Echo HTTP request headers back to clients (sorted alphabetically)
 - Simulate slow/long-running HTTP responses with configurable delays
 
-Built with Go 1.23 and uses Go modules for dependency management (though currently has no external dependencies).
+Built with Go 1.25 and uses Go modules for dependency management (though currently has no external dependencies).
 
 ## Development Commands
 
@@ -54,7 +54,7 @@ main() → Register handlers → Start HTTP server
 
 - **Standard library only**: No external dependencies beyond Go standard library
 - **Stateless**: Pure request/response model with no persistence or state
-- **Docker-focused**: Uses multi-stage Docker build (Go 1.23-alpine for building, alpine:latest for runtime) resulting in ~15MB images
+- **Docker-focused**: Uses multi-stage Docker build (Go 1.25-alpine for building, alpine:latest for runtime) resulting in ~15MB images
 - **Separation of concerns**: One file per handler for clear organization
 - **Developer-friendly logging**: All requests logged to console with method, URL, and remote address
 
@@ -62,7 +62,7 @@ main() → Register handlers → Start HTTP server
 
 The Dockerfile uses a multi-stage build:
 
-1. **Build stage**: Compiles the Go binary using `golang:1.23-alpine`
+1. **Build stage**: Compiles the Go binary using `golang:1.25-alpine`
 2. **Runtime stage**: Copies only the binary to a minimal `alpine:latest` image
 
 This approach results in small, secure images (~15MB) compared to including the full Go toolchain.
