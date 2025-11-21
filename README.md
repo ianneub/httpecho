@@ -9,7 +9,7 @@ Start the program and an HTTP server will be listening on port 8080.
 This is easy to start with docker:
 
 ```
-docker run -it -p 8080:8080 ianneub/httpecho
+docker run -it -p 8080:8080 ghcr.io/ianneub/httpecho:latest
 ```
 
 ## Endpoints

@@ -66,3 +66,16 @@ The Dockerfile uses a multi-stage build:
 2. **Runtime stage**: Copies only the binary to a minimal `alpine:latest` image
 
 This approach results in small, secure images (~15MB) compared to including the full Go toolchain.
+
+## Documentation Requirements
+
+**IMPORTANT**: Always update [README.md](README.md) whenever any of the following changes occur:
+
+- Configuration changes (ports, environment variables, timeouts, etc.)
+- Deployment locations change (Docker registry, image names, etc.)
+- New features, endpoints, or functionality are added
+- Build or run commands are modified
+- Dependencies or requirements change
+- Any user-facing behavior changes
+
+The README is the primary user-facing documentation and must stay in sync with the actual codebase.
